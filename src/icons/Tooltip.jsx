@@ -1,0 +1,18 @@
+
+export const Tooltip = () => {
+    return (
+        <svg
+            className="Form_icon__enhve Form_exclamatory__2Cz58"
+            width={8}
+            height={8}
+            viewBox="0 0 8 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M4 0C1.792 0 0 1.792 0 4C0 6.208 1.792 8 4 8C6.208 8 8 6.208 8 4C8 1.792 6.208 0 4 0ZM4.4 6H3.6V3.6H4.4V6ZM4.4 2.8H3.6V2H4.4V2.8Z"
+                fill="currentColor"
+            />
+        </svg>
+    )
+}

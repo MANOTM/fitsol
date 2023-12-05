@@ -1,0 +1,169 @@
+.Hero_container {
+    background-image: url('https://res.cloudinary.com/drln0tnyu/image/upload/v1699799695/image_pkt9ke.webp');
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+}
+.bgw{
+    background: #fff;
+}
+.sticky-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 50%;
+    padding-bottom: 20px;
+}
+
+.sticky-box * {
+    font-family: var(--font-bold);
+    color: white;
+    font-size: 2rem;
+
+}
+
+.products-list {
+    max-width: 1800px;
+    width: 99%;
+    margin-inline: auto;
+    padding: 20px 0;
+    position: relative;
+}
+
+.products-list-head {
+    text-align: center;
+}
+
+.left {
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+
+.products-list-products {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    row-gap: 20px;
+}
+.break-text{
+    display: flex;
+    justify-content: end;
+    margin: 2rem 0;
+    text-align: justify;
+    padding-right: 10px;
+}
+.break-text div{
+    width: 50%;
+}
+.break-text div{
+   font-family: var(--font-bold);
+   font-size: 4vw;
+   word-spacing: 15px;
+}
+.shop_now{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    width: 99%;
+    margin-inline: auto;
+} 
+.shop_now img{
+    width: 100%;
+}  
+.shop_now .men ,.shop_now .women{
+    background-color: white;
+}
+.school-collection{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://res.cloudinary.com/drln0tnyu/image/upload/v1700244992/044d91de-b65a-4bbf-8e60-b55b32ef78bb_back-to-school_mo6ied.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+.school-collection h1{
+    font-family: var(--font-bold);
+    color: white;
+    font-size: 4rem;
+}
+.stick-bottom p{
+    font-family: var(--font-bold);
+    font-size: 1.5rem;
+    color: white;
+}
+.stick-bottom{
+    position: sticky;
+    bottom: 10%;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 10px;
+}
+.show-school-collection{
+    background-color: transparent;
+    height: 100vh;
+    width: 100vw;
+}
+@media (max-width:900px) {
+    .products-list-products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .break-text{
+        justify-content: center; 
+     }
+     .break-text div{ 
+        width: 96%;
+        font-size: 7.2vw;
+     }
+     .shop_now{ 
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 1px;
+    } 
+    .shop_now .women{
+        transform: translateY(-49px);
+    }
+}
+
+@media (max-width:770px) {
+    .sticky-box {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .products-list {
+        width: 97%;
+    }
+    
+.school-collection h1{ 
+    font-size: 9vw;
+}
+}
+
+@media (max-width:600px) {
+    .products-list-products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .products-list-products {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 20px;
+    }
+
+    .products-list-products div {
+        flex: 0 0 90%;
+        scroll-snap-align: start; 
+
+    }
+}

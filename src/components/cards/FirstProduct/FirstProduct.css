@@ -1,0 +1,27 @@
+.principal-product .product-img{
+    background-color: var(--bg-product);
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 5px;
+    position: relative; 
+}  
+.principal-product .product-img button{
+    position: absolute;
+    bottom: 20px;
+    width: 90%;
+    border: var(--border);
+    cursor: pointer;
+    background-color: white;
+    padding: 10px 0;
+    border-radius: 4px;
+    opacity: 0;
+    transition: 200ms;
+    -webkit-transition: 200ms;
+    -moz-transition: 200ms;
+    -ms-transition: 200ms;
+    -o-transition: 200ms;
+}
+.principal-product:hover button{
+    opacity: 1;
+}

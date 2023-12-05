@@ -1,0 +1,181 @@
+@font-face {
+  font-family: bold;
+  src: url('../src/fonts/NeueMontreal-Bold.otf');
+}
+
+@font-face {
+  font-family: light;
+  src: url('../src/fonts/NeueMontreal-Light.otf');
+}
+
+@font-face {
+  font-family: medium;
+  src: url('../src/fonts/NeueMontreal-Medium.otf');
+}
+
+@font-face {
+  font-family: regular;
+  src: url('../src/fonts/NeueMontreal-Regular.otf');
+}
+
+:root {
+  --SMALL-TEXT: 13px;
+  --font-bold: bold;
+  --font-light: light;
+  --font-medium: medium;
+  --font-regular: regular;
+  --border: 1.1px solid #bababa;
+  --bg-product: #f7f7f7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  color: var(--white);
+  font-family: var(--font-regular);
+  text-decoration: none;
+}
+
+body {
+  background-color: #fff;
+}
+
+.small-text {
+  font-size: var(--SMALL-TEXT);
+  font-weight: 500;
+  opacity: .9;
+}
+
+.c-p {
+  cursor: pointer;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background: #bababa;
+}
+
+.btn {
+  color: white;
+  background-color: black;
+  padding: 9.5px 80px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.pointer-none {
+  pointer-events: none;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.space {
+  opacity: 0;
+}
+
+.relative {
+  position: relative;
+}
+
+.op-8 {
+  opacity: .8;
+}
+
+.medium-title {
+  font-family: var(--font-bold);
+}
+
+.op-3 {
+  opacity: .3;
+  cursor: not-allowed !important;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exit {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.flex {
+  display: flex;
+  gap: 10px;
+}
+.gird-2{
+  display: grid;
+  grid-template-columns: repeat(2 , 1fr);
+  gap: 10px;
+}
+.w-100 {
+  width: 100%;
+}
+.point{
+  position: relative;
+    bottom: 3px;
+}
+select , option{
+  font-family: inherit;
+  font-size: inherit;
+} 
+.loading{
+  pointer-events: none;
+  cursor: progress !important;
+  opacity: .8;
+}
+
+.error{
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  /* fill: red; */
+  color: red;
+}
+.succes{
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #007177;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+button{
+  cursor: pointer;
+}
+.disabled{
+  opacity: .5;
+  pointer-events: none;
+}
+@media (max-width:500px) {
+  .btn {
+    padding: 9.5px 50px;
+  }
+}

@@ -1,0 +1,57 @@
+.horizontal-product{
+    max-height: 180px;
+    height: 180px; 
+    display: flex;
+    overflow: hidden;
+    padding-bottom: 15px;
+    border-bottom: var(--border);
+    gap: 15px;
+    margin-top: 15px;
+}
+.horizontal-product a{
+    background-color: var(--bg-product);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 150px;
+    width: 40%;
+}
+.horizontal-product img{
+    width: 100%;
+} 
+.bag-collection{
+    margin-bottom: 40px;
+}
+.h-p-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+} 
+.hpinfo-header{
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.4;
+}
+.horizontal-product .price {
+    flex-shrink: 0;
+}
+.horizontal-product .quantity{
+    display: flex;
+    align-items: center;
+    border: var(--border);
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.horizontal-product .quantity *{
+    border: none ;
+    padding: 3px 12px;
+    background-color: white;
+}
+.quantity button{
+    cursor: pointer;
+    font-size: 20px;
+}

@@ -1,0 +1,261 @@
+.header {
+    position: fixed;
+    width: 100%;
+    color: white;
+    z-index: 11;
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -ms-transition: all 300ms;
+    -o-transition: all 300ms;
+} 
+.header.active {
+    background-color: #fff;
+    color: black;
+    fill: black;
+}
+
+.desktop-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.search-btn {
+    padding: 2px 4px;
+}
+
+.desktop-header.active,
+.mobile-header.active {
+    color: black;
+    fill: black;
+}
+.desktop-header .desktop-item.active{
+    text-decoration: underline;
+    /* pointer-events: none;  */
+}
+.desktop-header.active .search-btn,
+.mobile-header.active .search-btn {
+    color: white;
+    background-color: black;
+}
+
+.desktop-header.active .desktop-item::before {
+    background-color: rgb(0, 0, 0);
+}
+
+.desktop-header * {
+    cursor: pointer;
+}
+
+.mobile-header * {
+    cursor: pointer;
+}
+
+.mobile-header *::before {
+    display: none;
+}
+
+.desktop-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.desktop-item::before {
+    content: "";
+    width: 100%;
+    height: 1.5px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.desktop-item:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.desktop-header .flex {
+    display: flex;
+    gap: 18px;
+}
+
+.search-desktop {
+    background-color: #00000056;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+.search-desktop header {
+    position: fixed;
+    width: 100%;
+    height: 140px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding-inline: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.search-desktop header input {
+    outline: none;
+    border: none;
+    height: 70px;
+    font-size: 4rem;
+    font-family: var(--font-bold);
+    text-transform: uppercase;
+    padding-bottom: 15px;
+    width: 90%;
+}
+
+.search-desktop header input::placeholder {
+    font-size: 4rem;
+    font-family: var(--font-bold);
+    opacity: .4;
+}
+
+.search-desktop .search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-header {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.mobile-header .flex {
+    display: flex;
+    gap: 10px;
+}
+
+.header {
+    fill: #fff;
+}
+
+.header svg {
+    fill: inherit
+}
+
+.header_popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9999;
+    padding: 10px;
+}
+
+.header_popup .links {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: var(--font-bold);
+    font-size: 14.5vw;
+    margin-top: 20px;
+}
+
+.links a {
+    font: inherit;
+}
+
+.header_popup .close-btn {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+}
+
+.bag {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 770px;
+    background-color: #fff;
+    padding: 20px 15px;
+    padding-top: 0;
+    overflow: auto;
+}
+
+.bag header {
+    border-bottom: var(--border);
+    padding-bottom: 20px;
+    position: fixed;
+    top: 0;
+    background: white;
+    width: 740px;
+    max-width: calc(100% - 30px);
+    z-index: 11;
+    padding-top: 20px;
+}
+
+.bag-content {  
+    margin-top: 76px;
+    padding-bottom: 100px;
+} 
+.bag-text{
+    font-family: var(--font-bold);
+    font-size: 3.7rem;
+    margin: 25px 0;
+}
+.bag footer{    
+    position: fixed;
+    bottom: 0;
+    padding: 7px 0;
+    background: white;
+    width: 740px;
+    max-width: calc(100% - 30px);
+}
+.bag-total div{
+    border-bottom: var(--border);
+    padding: 10px 0;
+}
+.areusure{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: #00000056;
+    z-index: 1111;
+    top: 0;
+    left: 0;
+} 
+@media (max-width:650px) {
+    .desktop-header {
+        display: none;
+    }
+
+    .mobile-header {
+        display: flex;
+    }
+}
+@media (max-width:770px) {
+    .bag-text {
+        font-size: 7.7vw;
+    } 
+}
+@media (max-width:460px) {
+    .bag-text {
+        font-size: 7.3vw;
+        font-family: var(--font-medium);
+    } 
+    .header_popup .links {
+        font-size: 20vw;
+    }
+}

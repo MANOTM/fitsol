@@ -1,0 +1,43 @@
+.input{
+    width: 100%;
+    border:var(--border);
+    height: 44px;
+    padding:3px 15px ;
+    border-radius: 4px;
+    cursor: text;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    margin-bottom: 8px;
+}
+.input *{
+    cursor: text;
+}
+.input input{
+    outline: none;
+    border: none;
+    width: 100%;
+}
+.input .small-text{
+    display: block;
+    transform: translateY(9px);
+    transition: 100ms linear;
+    -webkit-transition: 100ms linear;
+    -moz-transition: 100ms linear;
+    -ms-transition: 100ms linear;
+    -o-transition: 100ms linear;
+    -webkit-transform: translateY(9px);
+    -moz-transform: translateY(9px);
+    -ms-transform: translateY(9px);
+    -o-transform: translateY(9px);
+}
+.input.active .small-text{
+    font-size: 10px;
+    color: gray;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+} 

@@ -1,0 +1,158 @@
+.preveiw {
+    max-width: 1800px;
+    width: 99%;
+    margin-inline: auto;
+    padding-top: 5rem;
+}
+
+.Breadcrumbs {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.preview-hero {
+    display: flex;
+    gap: 20px;
+}
+
+.preview-details {
+    max-width: 448px;
+    position: sticky;
+    top: 48px;
+    height: fit-content;
+    width: fit-content;
+}
+
+.preveiw .images {
+    display: flex;
+    gap: 3px;
+    width: calc(100% - 448px);
+}
+
+.preveiw .img {
+    background: var(--bg-product);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.preveiw .img img {
+    transform: translateY(-60px);
+    -webkit-transform: translateY(-60px);
+    -moz-transform: translateY(-60px);
+    -ms-transform: translateY(-60px);
+    -o-transform: translateY(-60px);
+}
+
+.preveiw img {
+    width: 100%;
+}
+
+.preview-details h1 {
+    font-family: var(--font-medium);
+    font-size: 3rem;
+}
+
+.preview-details .flex {
+    margin: 10px 0;
+}
+
+.preview-details .btn-size {
+    background: none;
+    border: var(--border);
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.preview-details button.active {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+.preview-details .add-tc {
+    width: 100%;
+    padding: 11px;
+    background: black;
+    border: none;
+    color: white;
+    border-radius: 4px;
+}
+
+.option-drawer {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.option-drawer .item {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+}
+
+.option-drawer img {
+    height: 20px;
+    width: 20px;
+}
+
+.product-desc {
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.product-desc p {
+    margin: 10px 0;
+}
+.likes{
+    margin: 20px 0;
+}
+@media (max-width:100px) {
+    .preveiw .images {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:1000px) {
+    .preveiw .images {
+        flex-direction: column;
+    }
+    .preveiw{
+        width: 95%;
+    }
+}
+
+@media (max-width:800px) {
+    .preview-hero {
+        flex-direction: column;
+    }
+
+    .images {
+        width: 100% !important;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-padding: 20px;
+        flex-direction: row !important;
+    }
+
+    .images .img {
+
+        flex: 0 0 90%;
+        scroll-snap-align: start;
+    }
+
+    .preview-details {
+        width: 100%;
+        max-width: 100%;
+    }
+    .size .flex{
+        flex-wrap: wrap;
+    }
+}
